@@ -13,7 +13,7 @@ Route::get('/healthcheck', function() {
     return response()->json([ 'healthy' => true ]);
 });
 
-Route::post('/', function (Request $request) {
+Route::post('/to/php/ast', function (Request $request) {
 
     $file = $request->file('source');
     $code = file_get_contents($file);
